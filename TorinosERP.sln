@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorinosERP.Domain", "TorinosERP.Domain\TorinosERP.Domain.csproj", "{04B7AB6B-4F2E-4952-AE81-8192FEBECBF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorinosERP.Infra.Data", "TorinosERP.Infra.Data\TorinosERP.Infra.Data.csproj", "{0F07F7EC-2983-43DC-BF34-99596E419F9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorinosERP.Application", "TorinosERP.Application\TorinosERP.Application.csproj", "{FE079FD7-3EF4-4F4A-A2B2-70D84445C4A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorinosERP.WinForms", "TorinosERP.WinForms\TorinosERP.WinForms.csproj", "{7AB8F33A-5A52-4E66-ADD4-0890164D04D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04B7AB6B-4F2E-4952-AE81-8192FEBECBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B7AB6B-4F2E-4952-AE81-8192FEBECBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B7AB6B-4F2E-4952-AE81-8192FEBECBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B7AB6B-4F2E-4952-AE81-8192FEBECBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F07F7EC-2983-43DC-BF34-99596E419F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F07F7EC-2983-43DC-BF34-99596E419F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F07F7EC-2983-43DC-BF34-99596E419F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F07F7EC-2983-43DC-BF34-99596E419F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE079FD7-3EF4-4F4A-A2B2-70D84445C4A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE079FD7-3EF4-4F4A-A2B2-70D84445C4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE079FD7-3EF4-4F4A-A2B2-70D84445C4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE079FD7-3EF4-4F4A-A2B2-70D84445C4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB8F33A-5A52-4E66-ADD4-0890164D04D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB8F33A-5A52-4E66-ADD4-0890164D04D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB8F33A-5A52-4E66-ADD4-0890164D04D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB8F33A-5A52-4E66-ADD4-0890164D04D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {994A230A-82C7-4553-B244-DEC5BDC19D5B}
+	EndGlobalSection
+EndGlobal
