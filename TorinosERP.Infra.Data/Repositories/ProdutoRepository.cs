@@ -43,7 +43,7 @@ namespace TorinosERP.Infra.Data.Repositories
         public async Task AtualizarAsync(Produto produto)
         {
             string sql = @"UPDATE produto 
-                        SET nome = @Nome, descricao = @Descricao, preco = @Preco 
+                        SET nome = @Nome, descricao = @Descricao, preco = @Preco , estoque = @Estoque
                         WHERE id = @Id";            
             await _session.Connection.ExecuteAsync(sql, produto, _session.Transaction);
         }

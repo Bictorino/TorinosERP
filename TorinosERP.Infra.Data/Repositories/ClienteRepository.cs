@@ -7,6 +7,7 @@ using Dapper;
 using TorinosERP.Domain.Entities;
 using TorinosERP.Domain.Interfaces.Repositories;
 using TorinosERP.Infra.Data.Context;
+using Npgsql;
 
 namespace TorinosERP.Infra.Data.Repositories
 {
@@ -21,11 +22,23 @@ namespace TorinosERP.Infra.Data.Repositories
 
         public async Task<int> AdicionarAsync(Cliente cliente)
         {
-            string sql = @"INSERT INTO cliente (nome, email, telefone) 
-                        VALUES (@Nome, @Email, @Telefone) 
-                        RETURNING id";
+            try
+            {
+                string sql = @"INSERT INTO cliente (nome, email, telefone) 
+                       VALUES (@Nome, @Email, @Telefone) 
+                       RETURNING id";
 
-            return await _session.Connection.ExecuteScalarAsync<int>(sql, cliente, _session.Transaction);
+                return await _session.Connection.ExecuteScalarAsync<int>(sql, cliente, _session.Transaction);
+            }
+            catch (PostgresException ex)
+            {                
+                if (ex.SqlState == "23505" && ex.ConstraintName?.Contains("email") == true)
+                {
+                    throw new Exception("Este e-mail já está cadastrado para outro cliente.");
+                }
+
+                throw;
+            }
         }
 
         public async Task<IEnumerable<Cliente>> ObterTodosAsync()
@@ -42,10 +55,21 @@ namespace TorinosERP.Infra.Data.Repositories
 
         public async Task AtualizarAsync(Cliente cliente)
         {
-            string sql = @"UPDATE cliente 
-                        SET nome = @Nome, email = @Email, telefone = @Telefone 
-                        WHERE id = @Id";
-            await _session.Connection.ExecuteAsync(sql, cliente, _session.Transaction);
+            try
+            {
+                string sql = @"UPDATE cliente 
+                       SET nome = @Nome, email = @Email, telefone = @Telefone 
+                       WHERE id = @Id";
+                await _session.Connection.ExecuteAsync(sql, cliente, _session.Transaction);
+            }
+            catch (PostgresException ex)
+            {
+                if (ex.SqlState == "23505" && ex.ConstraintName?.Contains("email") == true)
+                {
+                    throw new Exception("Este e-mail já está em uso por outro cliente.");
+                }
+                throw;
+            }
         }
 
         public async Task RemoverAsync(int id)
