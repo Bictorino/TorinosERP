@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TorinosERP.Domain\TorinosERP.Domain.csproj" />
+    <ProjectReference Include="..\TorinosERP.Infra.Data\TorinosERP.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

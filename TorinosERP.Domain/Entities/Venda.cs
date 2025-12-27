@@ -73,5 +73,14 @@ namespace TorinosERP.Domain.Entities
             DataVenda = dataVenda;
             Status = status;
         }
+
+        public void Reabrir()
+        {
+            if (Status != VendaStatus.Efetivada)
+                throw new Exception("Apenas vendas efetivadas podem ser reabertas.");
+
+            Status = VendaStatus.Aberta;
+            DataVenda = null; 
+        }
     }
 }

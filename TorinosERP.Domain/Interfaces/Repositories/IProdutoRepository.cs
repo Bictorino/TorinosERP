@@ -15,5 +15,6 @@ namespace TorinosERP.Domain.Interfaces.Repositories
         Task AtualizarAsync(Produto produto);
         Task RemoverAsync(int id);
         Task BaixarEstoqueAsync(int produtoId, int quantidade);
+        Task ReporEstoqueAsync(int produtoId, int quantidade);
     }
 }

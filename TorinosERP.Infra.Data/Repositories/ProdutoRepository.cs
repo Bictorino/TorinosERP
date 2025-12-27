@@ -59,5 +59,14 @@ namespace TorinosERP.Infra.Data.Repositories
             string sql = "DELETE FROM produto WHERE id = @Id";
             await _session.Connection.ExecuteAsync(sql, new { Id = id }, _session.Transaction);
         }
+
+        public async Task ReporEstoqueAsync(int produtoId, int quantidade)
+        {
+            var sql = "UPDATE produto SET estoque = estoque + @Quantidade WHERE id = @Id";
+
+            await _session.Connection.ExecuteAsync(sql,
+                new { Quantidade = quantidade, Id = produtoId },
+                _session.Transaction);
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace TorinosERP.Infra.Data.Context
     public class DbSession : IDisposable
     {
         public IDbConnection Connection { get; }
-        public IDbTransaction Transaction { get; set; }
+        public IDbTransaction? Transaction { get; set; }
 
         public DbSession()
         {
