@@ -11,7 +11,7 @@ namespace TorinosERP.Domain.Interfaces.Repositories
     {        
         Task<int> AdicionarAsync(Cliente cliente);
         Task<IEnumerable<Cliente>> ObterTodosAsync();
-        Task<Cliente> ObterPorIdAsync(int id);     
+        Task<Cliente?> ObterPorIdAsync(int id);     
         Task AtualizarAsync(Cliente cliente);
         Task RemoverAsync(int id);
     }

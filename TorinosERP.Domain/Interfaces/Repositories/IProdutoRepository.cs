@@ -11,7 +11,7 @@ namespace TorinosERP.Domain.Interfaces.Repositories
     {
         Task<int> AdicionarAsync(Produto produto);
         Task<IEnumerable<Produto>> ObterTodosAsync();
-        Task<Produto> ObterPorIdAsync(int id);
+        Task<Produto?> ObterPorIdAsync(int id);
         Task AtualizarAsync(Produto produto);
         Task RemoverAsync(int id);
         Task BaixarEstoqueAsync(int produtoId, int quantidade);

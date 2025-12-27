@@ -14,6 +14,6 @@ namespace TorinosERP.Domain.Interfaces.Repositories
         Task AtualizarAsync(Venda venda); 
         Task AdicionarItemAsync(VendaItem item);
         Task RemoverItensDaVendaAsync(int vendaId); 
-        Task<Venda> ObterPorIdAsync(int id);
+        Task<Venda?> ObterPorIdAsync(int id);
     }
 }
