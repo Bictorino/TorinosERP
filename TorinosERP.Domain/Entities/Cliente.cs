@@ -25,6 +25,8 @@ namespace TorinosERP.Domain.Entities
             Telefone = telefone;
         }
 
+        protected Cliente() { }
+
         public void AtualizarDados(string nome, string email, string telefone)
         {
             if (string.IsNullOrWhiteSpace(nome))

@@ -23,11 +23,14 @@ namespace TorinosERP.Domain.Entities
             Descricao = descricao;
         }
 
-        public void Atualizar(string nome, decimal preco, string descricao)
+        protected Produto() { }
+
+        public void Atualizar(string nome, decimal preco, int estoque ,string descricao)
         {
             Validar(nome, preco, this.Estoque);
             Nome = nome;
             Preco = preco;
+            Estoque = estoque;
             Descricao = descricao;
         }
 
