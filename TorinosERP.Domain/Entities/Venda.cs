@@ -28,6 +28,8 @@ namespace TorinosERP.Domain.Entities
             ValorTotal = 0;
         }
 
+        protected Venda() { }
+
         public void AdicionarItem(VendaItem item)
         {
             if (Status != VendaStatus.Aberta)
@@ -81,6 +83,12 @@ namespace TorinosERP.Domain.Entities
 
             Status = VendaStatus.Aberta;
             DataVenda = null; 
+        }
+
+        public void CarregarItens(IEnumerable<VendaItem> itensDoBanco)
+        {
+            _itens.AddRange(itensDoBanco);
+            CalcularTotal();
         }
     }
 }

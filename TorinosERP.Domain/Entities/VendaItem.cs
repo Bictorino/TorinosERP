@@ -26,7 +26,9 @@ namespace TorinosERP.Domain.Entities
             Quantidade = quantidade;
             PrecoUnitario = precoUnitario;
         }
-        
+
+        protected VendaItem() { }
+
         public void AssociarVenda(int vendaId)
         {
             VendaId = vendaId;

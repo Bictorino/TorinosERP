@@ -103,6 +103,26 @@ namespace TorinosERP.WinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_32dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_32dp_204058", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_32dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("check_32dp_204058", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clear_24dp_0000F5 {
             get {
                 object obj = ResourceManager.GetObject("clear_24dp_0000F5", resourceCulture);
@@ -126,6 +146,16 @@ namespace TorinosERP.WinForms.Properties {
         internal static System.Drawing.Bitmap clear_32dp_204058 {
             get {
                 object obj = ResourceManager.GetObject("clear_32dp_204058", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_16dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("close_16dp_204058", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +206,16 @@ namespace TorinosERP.WinForms.Properties {
         internal static System.Drawing.Bitmap ImagemFundo {
             get {
                 object obj = ResourceManager.GetObject("ImagemFundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_label_16dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("new_label_16dp_204058", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +303,26 @@ namespace TorinosERP.WinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap restore_32dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("restore_32dp_204058", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_16dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("save_16dp_204058", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_32dp_204058 {
             get {
                 object obj = ResourceManager.GetObject("save_32dp_204058", resourceCulture);
@@ -286,6 +346,16 @@ namespace TorinosERP.WinForms.Properties {
         internal static System.Drawing.Bitmap save_as_32dp_0000F5 {
             get {
                 object obj = ResourceManager.GetObject("save_as_32dp_0000F5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_32dp_204058 {
+            get {
+                object obj = ResourceManager.GetObject("search_32dp_204058", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

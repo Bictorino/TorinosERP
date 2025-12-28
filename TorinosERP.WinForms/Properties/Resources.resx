@@ -118,79 +118,100 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="person_add_alt_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_add_alt_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new_label_32dp_204058 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_label_32dp_204058 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sell_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sell_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save_16dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_16dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save_as_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save_as_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImagemFundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImagemFundo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save_as_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_as_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="print_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\print_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sell_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sell_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clear_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clear_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="app_registration_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\app_registration_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="people_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\people_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clear_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="app_registration_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\app_registration_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_label_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_label_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clear_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attach_money_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attach_money_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="people_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\people_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_label_32dp_204058 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_label_32dp_204058 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_forever_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_forever_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clear_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clear_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_forever_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_forever_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="print_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\print_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clear_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clear_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="attach_money_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attach_money_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new_label_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_label_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sell_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sell_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="person_add_alt_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person_add_alt_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="attach_money_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attach_money_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="attach_money_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attach_money_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImagemFundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImagemFundo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_label_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_label_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_forever_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_forever_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_16dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_16dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_as_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_as_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="app_registration_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\app_registration_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="app_registration_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\app_registration_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sell_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sell_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_forever_32dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_forever_32dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restore_32dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restore_32dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_label_24dp_0000F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_label_24dp_0000F5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_label_16dp_204058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_label_16dp_204058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

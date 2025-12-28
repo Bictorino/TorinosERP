@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using TorinosERP.Domain.DTOs;
 using TorinosERP.Domain.Entities;
 using TorinosERP.Domain.Enums;
 using TorinosERP.Domain.Interfaces.Repositories;
@@ -84,11 +85,83 @@ namespace TorinosERP.Infra.Data.Repositories
 
                 foreach (var item in itens)
                 {
-                    venda.AdicionarItem(item);
+                    venda.CarregarItens(itens);
                 }
 
                 return venda;
             }
         }
+
+        public async Task RemoverItemAsync(int idItem)
+        {
+            string sql = "DELETE FROM venda_item WHERE id = @Id";
+            await _session.Connection.ExecuteAsync(sql, new { Id = idItem }, _session.Transaction);
+        }
+
+        public async Task<IEnumerable<VendaItem>> ObterItensDaVendaAsync(int vendaId)
+        {
+            string sql = "SELECT * FROM venda_item WHERE venda_id = @VendaId";
+            return await _session.Connection.QueryAsync<VendaItem>(sql, new { VendaId = vendaId }, _session.Transaction);
+        }
+
+        public async Task<IEnumerable<VendaDTO.VendaResultadoDto>> PesquisarAsync(VendaDTO.FiltroVendaDto filtro)
+        {
+            var sql = new StringBuilder(@"
+            SELECT 
+                v.id AS Id,
+                c.nome AS ClienteNome,
+                v.data_cadastro AS DataCadastro,
+                v.data_venda AS DataVenda,
+                v.valor_total AS ValorTotal,
+                v.status AS Status
+            FROM venda v
+            INNER JOIN cliente c ON v.cliente_id = c.id
+            WHERE 1=1 ");
+
+            var parametros = new DynamicParameters();
+           
+            if (filtro.ClienteId.HasValue)
+            {
+                sql.Append(" AND v.cliente_id = @ClienteId ");
+                parametros.Add("ClienteId", filtro.ClienteId.Value);
+            }
+
+            if (filtro.Status.HasValue)
+            {
+                sql.Append(" AND v.status = @Status ");
+                parametros.Add("Status", (int)filtro.Status.Value);
+            }
+
+            if (filtro.DataCadastroInicio.HasValue)
+            {
+                sql.Append(" AND v.data_cadastro >= @DataCadIni ");
+                parametros.Add("DataCadIni", filtro.DataCadastroInicio.Value.Date);
+            }
+            if (filtro.DataCadastroFim.HasValue)
+            {
+                sql.Append(" AND v.data_cadastro <= @DataCadFim ");
+                parametros.Add("DataCadFim", filtro.DataCadastroFim.Value.Date.AddDays(1).AddTicks(-1));
+            }
+
+            if (filtro.DataEfetivacaoInicio.HasValue)
+            {
+                sql.Append(" AND v.data_venda >= @DataEfecIni ");
+                parametros.Add("DataEfecIni", filtro.DataEfetivacaoInicio.Value.Date);
+            }
+            if (filtro.DataEfetivacaoFim.HasValue)
+            {
+                sql.Append(" AND v.data_venda <= @DataEfecFim ");
+                parametros.Add("DataEfecFim", filtro.DataEfetivacaoFim.Value.Date.AddDays(1).AddTicks(-1));
+            }
+
+            sql.Append(" ORDER BY v.data_cadastro DESC");
+
+            return await _session.Connection.QueryAsync<VendaDTO.VendaResultadoDto>(
+                sql.ToString(),
+                parametros,
+                _session.Transaction
+            );
+        }
+
     }
 }
