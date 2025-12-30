@@ -91,8 +91,9 @@ No projeto `TorinosERP.WinForms`, abra o arquivo `App.config` e ajuste a string 
 ```xml
 <connectionStrings>
     <add name="TorinosERP" 
-         connectionString="Host=localhost;Port=5432;Database=torinos;Username=postgres;Password=sua_senha;" 
+         connectionString="Host=localhost;Port=5432;Database=torinos_erp;Username=postgres;Password=sua_senha;" 
          providerName="Npgsql" />
 </connectionStrings>
+```
 
 ### Passo 4: Altere o projeto de incialização para: TorinosERP.WinForms
