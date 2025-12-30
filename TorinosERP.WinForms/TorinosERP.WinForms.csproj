@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.29" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Relatorios\DataSets\RelatorioVenda.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RelatorioVenda.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +37,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Relatorios\DataSets\RelatorioVenda.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RelatorioVenda.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Relatorios\VendaResumido.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
