@@ -21,13 +21,13 @@ namespace TorinosERP.WinForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-
+            Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
             var services = new ServiceCollection();
             ConfigureServices(services);
 
             ServiceProvider = services.BuildServiceProvider();
             var formMenu = ServiceProvider.GetRequiredService<FrmMenu>();
-
+            formMenu.StartPosition = FormStartPosition.CenterScreen;
             System.Windows.Forms.Application.Run(formMenu);
         }
 

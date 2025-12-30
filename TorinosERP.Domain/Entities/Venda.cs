@@ -89,6 +89,6 @@ namespace TorinosERP.Domain.Entities
         {
             _itens.AddRange(itensDoBanco);
             CalcularTotal();
-        }
+        }        
     }
 }

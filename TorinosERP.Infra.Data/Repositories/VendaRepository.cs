@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dapper;
 using TorinosERP.Domain.DTOs;
 using TorinosERP.Domain.Entities;
 using TorinosERP.Domain.Enums;
 using TorinosERP.Domain.Interfaces.Repositories;
 using TorinosERP.Infra.Data.Context;
+using static TorinosERP.Domain.DTOs.VendaDTO;
 
 namespace TorinosERP.Infra.Data.Repositories
 {
@@ -61,29 +62,18 @@ namespace TorinosERP.Infra.Data.Repositories
 
         public async Task<Venda?> ObterPorIdAsync(int id)
         {            
-            var sql = @"
-                        SELECT * FROM venda WHERE id = @Id;
-                        SELECT * FROM venda_item WHERE venda_id = @Id";
+            string sql = @"
+                            SELECT * FROM venda WHERE id = @Id;
+                            SELECT * FROM venda_item WHERE venda_id = @Id"; 
 
             using (var multi = await _session.Connection.QueryMultipleAsync(sql, new { Id = id }, _session.Transaction))
-            {
-                var vendaDto = await multi.ReadFirstOrDefaultAsync<dynamic>();
+            {                
+                var venda = await multi.ReadFirstOrDefaultAsync<Venda>();
 
-                if (vendaDto == null) return null;
-
-                var statusEnum = (VendaStatus)Convert.ToInt32(vendaDto.status);
-                var clienteId = Convert.ToInt32(vendaDto.cliente_id);
-                var idVenda = Convert.ToInt32(vendaDto.id);
-
-                DateTime dataCadastro = vendaDto.data_cadastro;
-                DateTime? dataVenda = vendaDto.data_venda;
-
-                var venda = new Venda(clienteId);
-                venda.ConfirmarVenda(idVenda, dataCadastro, dataVenda, statusEnum);
-
+                if (venda == null) return null;
                 var itens = await multi.ReadAsync<VendaItem>();
-
-                foreach (var item in itens)
+                
+                if (itens != null)
                 {
                     venda.CarregarItens(itens);
                 }
@@ -104,19 +94,20 @@ namespace TorinosERP.Infra.Data.Repositories
             return await _session.Connection.QueryAsync<VendaItem>(sql, new { VendaId = vendaId }, _session.Transaction);
         }
 
-        public async Task<IEnumerable<VendaDTO.VendaResultadoDto>> PesquisarAsync(VendaDTO.FiltroVendaDto filtro)
+        public async Task<IEnumerable<VendaDTO.VendaResultado>> PesquisarAsync(VendaDTO.VendaFiltro filtro)
         {
-            var sql = new StringBuilder(@"
-            SELECT 
-                v.id AS Id,
-                c.nome AS ClienteNome,
-                v.data_cadastro AS DataCadastro,
-                v.data_venda AS DataVenda,
-                v.valor_total AS ValorTotal,
-                v.status AS Status
-            FROM venda v
-            INNER JOIN cliente c ON v.cliente_id = c.id
-            WHERE 1=1 ");
+            StringBuilder sql = new StringBuilder();
+
+            sql.AppendLine("SELECT ");
+            sql.AppendLine("    v.id AS Id,");
+            sql.AppendLine("    c.nome AS ClienteNome,");
+            sql.AppendLine("    v.data_cadastro AS DataCadastro,");
+            sql.AppendLine("    v.data_venda AS DataVenda,");
+            sql.AppendLine("    v.valor_total AS ValorTotal,");
+            sql.AppendLine("    v.status AS Status");
+            sql.AppendLine("FROM venda v");
+            sql.AppendLine("INNER JOIN cliente c ON v.cliente_id = c.id");
+            sql.AppendLine("WHERE 1=1");
 
             var parametros = new DynamicParameters();
            
@@ -156,12 +147,73 @@ namespace TorinosERP.Infra.Data.Repositories
 
             sql.Append(" ORDER BY v.data_cadastro DESC");
 
-            return await _session.Connection.QueryAsync<VendaDTO.VendaResultadoDto>(
+            return await _session.Connection.QueryAsync<VendaDTO.VendaResultado>(
                 sql.ToString(),
                 parametros,
                 _session.Transaction
             );
         }
 
+        public async Task<IEnumerable<VendaRelatorioGeral>> ObterDadosRelatorioAsync(
+        int? clienteId,
+        int? statusId,
+        DateTime dataInicial,
+        DateTime dataFinal,
+        bool filtrarPorDataVenda)
+        {
+            var sql = new StringBuilder();
+            var parametros = new DynamicParameters();
+
+            sql.AppendLine("SELECT ");
+            sql.AppendLine("    c.nome as ClienteNome,");
+            sql.AppendLine("    CASE ");
+            sql.AppendLine("        WHEN v.status = 0 THEN 'Aberta'");
+            sql.AppendLine("        WHEN v.status = 1 THEN 'Finalizada'");
+            sql.AppendLine("        WHEN v.status = 2 THEN 'Cancelada'");
+            sql.AppendLine("        ELSE 'Outro' ");
+            sql.AppendLine("    END as Status,");
+            sql.AppendLine("    v.id as VendaId,");
+            sql.AppendLine("    v.data_venda as DataVenda,");
+            sql.AppendLine("    v.data_cadastro as DataCadastro,");
+            sql.AppendLine("    v.valor_total as TotalVenda,");
+            sql.AppendLine("    p.nome as ProdutoNome,");
+            sql.AppendLine("    vi.quantidade as Quantidade,");
+            sql.AppendLine("    vi.preco_unitario as PrecoUnitario,");
+            sql.AppendLine("    vi.subtotal as SubtotalItem ");
+            sql.AppendLine("FROM venda v ");
+            sql.AppendLine("INNER JOIN cliente c ON v.cliente_id = c.id ");
+            sql.AppendLine("INNER JOIN venda_item vi ON vi.venda_id = v.id ");
+            sql.AppendLine("INNER JOIN produto p ON vi.produto_id = p.id ");
+            sql.AppendLine("WHERE 1=1");
+
+            parametros.Add("@DataInicial", dataInicial.Date);
+            parametros.Add("@DataFinal", dataFinal.Date.AddDays(1).AddSeconds(-1));
+
+            if (filtrarPorDataVenda)
+            {
+                sql.AppendLine("AND v.data_venda >= @DataInicial AND v.data_venda <= @DataFinal");
+            }
+            else
+            {
+                sql.AppendLine("AND v.data_cadastro >= @DataInicial AND v.data_cadastro <= @DataFinal");
+            }
+
+            if (clienteId.HasValue && clienteId.Value > 0)
+            {
+                sql.AppendLine("AND v.cliente_id = @ClienteId");
+                parametros.Add("@ClienteId", clienteId.Value);
+            }
+
+            if (statusId.HasValue && statusId.Value >= 0)
+            {
+                sql.AppendLine("AND v.status = @StatusId");
+                parametros.Add("@StatusId", statusId.Value);
+            }
+
+            sql.AppendLine("ORDER BY c.nome, v.status, v.id");
+
+            var conn = _session.Connection;
+            return await conn.QueryAsync<VendaRelatorioGeral>(sql.ToString(), parametros);
+        }
     }
 }

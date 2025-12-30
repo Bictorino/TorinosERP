@@ -77,7 +77,7 @@ namespace TorinosERP.WinForms
                 btnPesquisar.Enabled = false;
 
                 #pragma warning disable CS8605
-                var filtro = new VendaDTO.FiltroVendaDto
+                var filtro = new VendaDTO.VendaFiltro
                 {
                     ClienteId = cmbCliente.SelectedIndex != -1 ? (int)cmbCliente.SelectedValue : null,
                     Status = cmbStatusVenda.SelectedIndex != -1 ? (VendaStatus)cmbStatusVenda.SelectedItem : null
@@ -122,7 +122,7 @@ namespace TorinosERP.WinForms
 
         private void SelecionarVenda()
         {
-            if (dgvPesquisa.CurrentRow?.DataBoundItem is VendaDTO.VendaResultadoDto vendaSelecionada)
+            if (dgvPesquisa.CurrentRow?.DataBoundItem is VendaDTO.VendaResultado vendaSelecionada)
             {
                 IdSelecionado = vendaSelecionada.Id;
                 this.DialogResult = DialogResult.OK;

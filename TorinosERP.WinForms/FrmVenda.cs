@@ -313,6 +313,7 @@ namespace TorinosERP.WinForms
 
             using (var frm = new FrmPesquisarVendas(_vendaRepo, _clienteRepo))
             {
+                frm.StartPosition = FormStartPosition.CenterParent;
 
                 var result = frm.ShowDialog();
 

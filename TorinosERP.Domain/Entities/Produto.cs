@@ -34,20 +34,6 @@ namespace TorinosERP.Domain.Entities
             Descricao = descricao;
         }
 
-        public void DebitarEstoque(int quantidade)
-        {
-            if (quantidade <= 0) throw new Exception("Quantidade a debitar deve ser positiva.");
-            if (Estoque - quantidade < 0) throw new Exception($"Estoque insuficiente. Disponível: {Estoque}");
-
-            Estoque -= quantidade;
-        }
-
-        public void ReporEstoque(int quantidade)
-        {
-            if (quantidade <= 0) throw new Exception("Quantidade a repor deve ser positiva.");
-            Estoque += quantidade;
-        }
-
         private void Validar(string nome, decimal preco, int estoque)
         {
             if (string.IsNullOrWhiteSpace(nome)) throw new Exception("Nome do produto é obrigatório.");

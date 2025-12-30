@@ -18,8 +18,14 @@ namespace TorinosERP.Domain.Interfaces.Repositories
         Task<Venda?> ObterPorIdAsync(int id);
         Task RemoverItemAsync(int idItem);
         Task<IEnumerable<VendaItem>> ObterItensDaVendaAsync(int vendaId);
-
-        Task<IEnumerable<VendaDTO.VendaResultadoDto>> PesquisarAsync(VendaDTO.FiltroVendaDto filtro);
+        Task<IEnumerable<VendaDTO.VendaResultado>> PesquisarAsync(VendaDTO.VendaFiltro filtro);
+        Task<IEnumerable<VendaRelatorioGeral>> ObterDadosRelatorioAsync(
+            int? clienteId,
+            int? statusId,
+            DateTime dataInicial,
+            DateTime dataFinal,
+            bool filtrarPorDataVenda
+        );
 
     }
 }

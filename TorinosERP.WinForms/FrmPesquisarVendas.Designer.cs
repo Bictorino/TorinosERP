@@ -149,7 +149,7 @@
             grTipoData.Controls.Add(rdbDataVenda);
             grTipoData.Location = new Point(458, 107);
             grTipoData.Name = "grTipoData";
-            grTipoData.Size = new Size(105, 87);
+            grTipoData.Size = new Size(109, 87);
             grTipoData.TabIndex = 36;
             grTipoData.TabStop = false;
             grTipoData.Text = "Filtro Data";
