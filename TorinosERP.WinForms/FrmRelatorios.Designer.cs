@@ -80,7 +80,6 @@
             // rdbDataCadastro
             // 
             rdbDataCadastro.AutoSize = true;
-            rdbDataCadastro.Enabled = false;
             rdbDataCadastro.Location = new Point(6, 52);
             rdbDataCadastro.Name = "rdbDataCadastro";
             rdbDataCadastro.Size = new Size(99, 19);
@@ -188,12 +187,11 @@
             // rdbAnalitico
             // 
             rdbAnalitico.AutoSize = true;
-            rdbAnalitico.Checked = true;
+            rdbAnalitico.Enabled = false;
             rdbAnalitico.Location = new Point(98, 22);
             rdbAnalitico.Name = "rdbAnalitico";
             rdbAnalitico.Size = new Size(72, 19);
             rdbAnalitico.TabIndex = 37;
-            rdbAnalitico.TabStop = true;
             rdbAnalitico.Text = "Analítico";
             rdbAnalitico.UseVisualStyleBackColor = true;
             // 
@@ -205,7 +203,6 @@
             rdbResumido.Name = "rdbResumido";
             rdbResumido.Size = new Size(78, 19);
             rdbResumido.TabIndex = 36;
-            rdbResumido.TabStop = true;
             rdbResumido.Text = "Resumido";
             rdbResumido.UseVisualStyleBackColor = true;
             // 
